@@ -34,6 +34,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  
   int screenIndex = 2;
   ValueNotifier<MaterialColor> colorNotifier = ValueNotifier(Colors.green);
 
@@ -69,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 50,
                     color: iconColors[index],
                     loopAnimation: true,
-                    //1.) this is the issue i encountered while trying to use RiveIcon for bottomnav bar icon,
+                    //1.) this is the issue(IT IS NOT REALLY A BUG PER SAY, IT WAS JUST FOR MY USECASE) i encountered while trying to use RiveIcon for bottomnav bar icon,
                     ///2.) I noticed the [RiveAnimatedIcon] is wrapped with an Inkwell, which overrides the onTap property of the GestureDetector used to update the screenIndex
                     ///
                     ///
@@ -120,6 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                                     //For some reasons,the icon color is not rebuilding except on restart.
                                     //Aside that, i love the package, it's very simple to use, and the icons are beautiful
+                                    //ASIDE THAT I LOVE THE PACKAGE 😍, IT'S VERY SIMPLE TO USE,  AND THE ICONS ARE BEAUTIFUL💜. Jisike 💪🏽
                                     return RiveAnimatedIcon(
                                       riveIcon: e,
                                       width: 50,
