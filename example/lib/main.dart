@@ -120,7 +120,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                     log('what is the color: $color');
 
                                     //For some reasons,the icon color is not rebuilding except on restart.
-                                    //Aside that, i love the package, it's very simple to use, and the icons are beautiful
                                     //ASIDE THAT I LOVE THE PACKAGE 😍, IT'S VERY SIMPLE TO USE,  AND THE ICONS ARE BEAUTIFUL💜. Jisike 💪🏽
                                     return RiveAnimatedIcon(
                                       riveIcon: e,
