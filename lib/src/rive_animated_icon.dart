@@ -53,13 +53,14 @@ class _RiveAnimatedIconState extends State<RiveAnimatedIcon> {
   Widget build(BuildContext context) {
     final icon = widget.riveIcon.getRiveAsset();
     return InkWell(
-      onTap: () {
-        icon.input?.change(true);
-        Future.delayed(const Duration(seconds: 1), () {
-          icon.input?.change(false);
-        });
-        widget.onTap?.call();
-      },
+      onTap: widget.onTap ??
+          () {
+            icon.input?.change(true);
+            Future.delayed(const Duration(seconds: 1), () {
+              icon.input?.change(false);
+            });
+            widget.onTap?.call();
+          },
       onHover: (value) {
         icon.input!.change(true);
         Future.delayed(const Duration(seconds: 1), () {
@@ -90,9 +91,7 @@ class _RiveAnimatedIconState extends State<RiveAnimatedIcon> {
                 }
               }
             });
-            widget.loopAnimation == true
-                ? icon.input!.change(true)
-                : icon.input!.change(false);
+            widget.loopAnimation == true ? icon.input!.change(true) : icon.input!.change(false);
           },
         ),
       ),
